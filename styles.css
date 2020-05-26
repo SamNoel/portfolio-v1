@@ -1,0 +1,240 @@
+/*
+ASSETS:
+Colors:
+  #404040 - main background, link hover font color
+  #E8E8E8 - dark gray - main font color
+  #6C6C6C - lighter gray - border colors, hover background color
+  #BEBEBE - darker gray - hover font color
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #404040;
+  color: #E8E8E8;
+  text-align: center;
+  font-family: 'Lucida Sans Unicode', 'Noto Sans', sans-serif;
+  font-weight: lighter;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav_links {
+  height: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.arrow-home {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.arrow-home a {
+  border-radius: 5px;
+}
+
+.arrow-home a:hover {
+  background-color: #505050;
+}
+
+.sub-menu {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  display: block;
+}
+
+.sub-menu-icon {
+  color: #E8E8E8;
+  background-color: #404040;
+  border: none;
+  display: block;
+  padding: 15px;
+  border-radius: 0 0 5px 5px;
+}
+
+.sub-menu-content {
+  display: none;
+}
+
+.sub-menu-content a {
+  border-bottom-left-radius: 5px;
+}
+
+.sub-menu-content, .sub-menu-content a {
+  position: relative;
+  background-color: #505050;
+  border-radius: 5px 5px 5px 0;
+  z-index: 2;
+}
+
+.sub-menu-content a {
+  border-radius: 5px;
+}
+
+.sub-menu:hover .sub-menu-icon {
+  background-color: #505050;
+}
+
+.sub-menu:hover .sub-menu-content {
+  display: block;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h1,
+h2 {
+  font-weight: lighter;
+}
+
+.header h2 {
+  padding-top: 0;
+  font-weight: lighter;
+}
+
+.nav {
+  width: 75%;
+}
+
+.nav-list {
+  margin: 35px 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  /*flex-wrap: wrap;*/
+  font-size: 1.2em;
+  border-bottom: 3px solid #E8E8E8;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list li a {
+  border-radius: 5px 5px 0 0;
+}
+
+a {
+  display: block;
+  padding: 5px 25px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 5px;
+}
+
+a:hover {
+  cursor: pointer;
+  background-color: #E8E8E8;
+  color: #404040;
+}
+
+.main-info {
+  text-align: center;
+  width: 75%;
+  /*background-color: #E5E5E5;*/
+  margin-top: 60px;
+  padding: 75px 100px;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+.main-info > img {
+  margin-top: 15px;
+}
+
+.infos {
+  margin-top: 200px;
+  text-align: left;
+  padding: 0;
+}
+
+.infos h1 {
+  text-align: center;
+  font-size: 2.3em;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #E8E8E8; /*#DFDFDF;*/
+}
+
+.infos h2 {
+  margin-bottom: 30px;
+  margin-top: 200px;
+}
+
+.infos h2:first-of-type {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.pensionpro-link a, .eaglerocket-link a {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.pensionpro-link a:hover, .eaglerocket-link a:hover {
+  background-color: #404040;
+  color: #BEBEBE;
+}
+
+/*a.pensionpro-link:hover {
+  background-color: #DFDFDF;
+  color: #778E1E;
+}
+
+.planned-projects li a.eaglerocket-link:hover {
+  background-color: #DFDFDF;
+  color: #FFCC00;
+}*/
+
+.projects-info ul li {
+  margin: 25px 0;
+}
+
+
+/* ---------------Media Queries--------------- */
+@media only screen and (max-width: 960px) {
+  .main-info {
+    width: 100%;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list li a {
+    border-radius: 5px;
+  }
+
+  .sub-menu {
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .main-info {
+    width: 100%;
+    padding: 0 50px;
+  }
+}

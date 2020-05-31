@@ -5,6 +5,9 @@ Colors:
   #E8E8E8 - dark gray - main font color
   #6C6C6C - lighter gray - border colors, hover background color
   #BEBEBE - darker gray - hover font color
+  #6C93A1 - darker blue hover color
+  #7FA6B5 - med blue color
+  #92B8C7 - light blue main background color
 */
 
 * {
@@ -14,7 +17,10 @@ Colors:
 }
 
 body {
-  background-color: #404040;
+  /* background-color: #404040; */
+  background-image: url("images/background-1920.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #E8E8E8;
   text-align: center;
   font-family: 'Lucida Sans Unicode', 'Noto Sans', sans-serif;
@@ -51,7 +57,7 @@ html {
 }
 
 .arrow-home a:hover {
-  background-color: #505050;
+  background-color: #6C93A1;
 }
 
 .sub-menu {
@@ -63,7 +69,7 @@ html {
 
 .sub-menu-icon {
   color: #E8E8E8;
-  background-color: #404040;
+  background-color: #92B8C7;
   border: none;
   display: block;
   padding: 15px;
@@ -80,7 +86,7 @@ html {
 
 .sub-menu-content, .sub-menu-content a {
   position: relative;
-  background-color: #505050;
+  background-color: #6C93A1;
   border-radius: 5px 5px 5px 0;
   z-index: 2;
 }
@@ -90,7 +96,7 @@ html {
 }
 
 .sub-menu:hover .sub-menu-icon {
-  background-color: #505050;
+  background-color: #6C93A1;
 }
 
 .sub-menu:hover .sub-menu-content {
@@ -232,7 +238,7 @@ a:hover {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .main-info {
     width: 100%;
     padding: 0 50px;

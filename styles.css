@@ -5,6 +5,7 @@ Colors:
   #E8E8E8 - dark gray - main font color
   #6C6C6C - lighter gray - border colors, hover background color
   #BEBEBE - darker gray - hover font color
+
   #6C93A1 - darker blue hover color
   #7FA6B5 - med blue color
   #92B8C7 - light blue main background color
@@ -103,6 +104,20 @@ html {
   display: block;
 }
 
+.sub-menu-content a::after {
+  display: block;
+  content: '';
+  width: 100%;
+  border-bottom: 2px solid #E8E8E8;
+  margin-bottom: -2px;
+  transform: scaleX(0);
+  transition: transform 150ms ease-in-out;
+}
+
+.sub-menu-content a:hover::after {
+  transform: scaleX(1);
+}
+
 h1 {
   font-size: 3em;
 }
@@ -128,29 +143,46 @@ h2 {
   justify-content: space-between;
   /*flex-wrap: wrap;*/
   font-size: 1.2em;
-  border-bottom: 3px solid #E8E8E8;
+  /* border-bottom: 3px solid #E8E8E8; */
 }
 
 .nav-list li {
   margin: 0;
 }
 
-.nav-list li a {
-  border-radius: 5px 5px 0 0;
+.nav-list li {
+  /* border-radius: 5px 5px 0 0; */
+  border-radius: 0;
+  transition: border-bottom;
+  transition-duration: 5s;
 }
 
 a {
   display: block;
+  width: 100%;
+  height: 100%;
   padding: 5px 25px;
   text-decoration: none;
   color: inherit;
   border-radius: 5px;
 }
 
-a:hover {
+.nav-list li::after {
+  display: block;
+  content: '';
+  /* background-color: #E8E8E8;
+  color: #404040; */
+  border-bottom: 2px solid #E8E8E8;
+  margin-bottom: -2px;
+  transform: scaleX(0);
+  transition: transform 150ms ease-in-out;
+}
+
+.nav-list li:hover::after {
   cursor: pointer;
-  background-color: #E8E8E8;
-  color: #404040;
+  /* background-color: #E8E8E8;
+  color: #404040; */
+  transform: scaleX(1);
 }
 
 .main-info {
